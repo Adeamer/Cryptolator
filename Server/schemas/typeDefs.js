@@ -14,17 +14,23 @@ const typeDefs = gql`
 
     type Currency {
         currencyType: String
-        purchasedAmount: Int
-        soldAmount: Int
+        purchasedAmount: String
+        soldAmount: String
         DateOfTransaction: Date
-        yearlyIncome: Int
-        costOwning: Int
+        yearlyIncome: String
+        costOwning: String
         timeOfOwnership: Boolean
+    }
+    
+    scalar Date
+
+    type MyType {
+        created: Date
     }
 
     type Graph {
-        tax-amount: Int
-        profit: Int
+        taxAmount: String
+        profit: String
     }
 
     type Query {
@@ -36,8 +42,8 @@ const typeDefs = gql`
 
     type Mutations {
         addUser(name: String!, email: String!): User
-        addCurrency(currencyType: String!, purchasedAmount: Int!, soldAmount: Int!, DateOfTransaction: Date!, yearlyIncome: Int!, timeOfOwnership: Boolean!): Currency
+        addCurrency(currencyType: String!, purchasedAmount: String!, soldAmount: String!, DateOfTransaction: Date!, yearlyIncome: String!, timeOfOwnership: Boolean!): Currency
     }
 `
 
-    module.exports = typeDefs;
+module.exports = typeDefs;
