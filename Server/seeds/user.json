@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Anthony Deamer",
+        "email": "anthony.deamer@hotmail.com",
+        "password": "123456789",
+        "wallet": [
+            {
+                "name": "Bitcoin",
+                "purchasedAmount": "$1000.00",
+                "soldAmount": "$1500.00",
+                "dateOfTransaction": "01/02/2021",
+                "yearlyIncome": "$100000.00",
+                "costOwning": "$250.00",
+                "timeOfOwnership": "True"
+            },
+            {
+                "name": "Ethereum",
+                "purchasedAmount": "$800.00",
+                "soldAmount": "$1200.00",
+                "dateOfTransaction": "01/03/2020",
+                "yearlyIncome": "$100000.00",
+                "costOwning": "$250.00",
+                "timeOfOwnership": "True"
+            }
+        ]
+    },
+    {
+        "name": "Jane Doe",
+        "email": "jane.doe@hotmail.com",
+        "password": "987654321",
+        "wallet": [
+            {
+                "name": "Bitcoin",
+                "purchasedAmount": "$5000.00",
+                "soldAmount": "$8000.00",
+                "dateOfTransaction": "25/09/2021",
+                "yearlyIncome": "$150000.00",
+                "costOwning": "$1000.00",
+                "timeOfOwnership": "True"
+            },
+            {
+                "name": "Ethereum",
+                "purchasedAmount": "$1000.00",
+                "soldAmount": "$2000.00",
+                "dateOfTransaction": "15/06/2020",
+                "yearlyIncome": "$150000.00",
+                "costOwning": "$600.00",
+                "timeOfOwnership": "True"
+            }
+        ]
+    }
+]
