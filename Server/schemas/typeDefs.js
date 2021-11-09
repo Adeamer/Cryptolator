@@ -16,7 +16,7 @@ const typeDefs = gql`
         currencyType: String
         purchasedAmount: String
         soldAmount: String
-        DateOfTransaction: Date
+        dateOfTransaction: Date
         yearlyIncome: String
         costOwning: String
         timeOfOwnership: Boolean
