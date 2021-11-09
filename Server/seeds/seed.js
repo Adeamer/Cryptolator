@@ -9,8 +9,8 @@ db.once('open', async () => {
   await Currency.deleteMany({});
   await User.deleteMany({});
 
-  const currencies = await Tech.insertMany(currencyData);
-  const users = await Tech.insertMany(userData);
+  const currencies = await Currency.insertMany(currencyData);
+  const users = await User.insertMany(userData);
 
   console.log('data seeded!');
   process.exit(0);
