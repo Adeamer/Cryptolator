@@ -5,7 +5,7 @@ const typeDefs = gql`
         _id: ID!
         name: String
         email: String
-        wallet: [Wallet]
+        currency: [Currency]
     }
 
     type Auth {
@@ -13,11 +13,8 @@ const typeDefs = gql`
         user: User
     }
 
-    type Wallet {
-        currency: [Currency]
-    }
-
     type Currency {
+        _id: ID!
         currencyType: String
         purchasedAmount: String
         soldAmount: String
@@ -40,15 +37,14 @@ const typeDefs = gql`
 
     type Query {
         user: User
-        wallet: [Wallet]
         currency: [Currency]
         graphs: [Graph]
     }
 
     type Mutations {
         addUser(name: String!, email: String!, password: String!): Auth
-        addCurrency(currencyType: String!, purchasedAmount: String!, soldAmount: String!, DateOfTransaction: Date!, yearlyIncome: String!, timeOfOwnership: Boolean!): Currency
-        removeCurrency(currencyType: String!): Currency
+        addCurrency(currencyType: String!, purchasedAmount: String!, soldAmount: String!, dateOfTransaction: Date!, yearlyIncome: String!, timeOfOwnership: Boolean!): Currency
+        removeCurrency(currencyId: ID!): User
         updateUser(name: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
     }
