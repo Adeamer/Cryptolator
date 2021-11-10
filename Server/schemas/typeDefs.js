@@ -40,14 +40,15 @@ const typeDefs = gql`
 
     type Query {
         user: User
-        wallets: [Wallet]
-        currencies: [Currency]
+        wallet: [Wallet]
+        currency: [Currency]
         graphs: [Graph]
     }
 
     type Mutations {
         addUser(name: String!, email: String!, password: String!): Auth
         addCurrency(currencyType: String!, purchasedAmount: String!, soldAmount: String!, DateOfTransaction: Date!, yearlyIncome: String!, timeOfOwnership: Boolean!): Currency
+        removeCurrency(currencyType: String!): Currency
         updateUser(name: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
     }
