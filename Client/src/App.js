@@ -1,12 +1,15 @@
 import react from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Home from './pages/home';
-import Dashboard from './pages/dashboard';
-import AddCurrency from './pages/addCurrency';
-import CurrencyForm from './components/currencyForm';
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import AddCurrency from './pages/AddCurrency';
+import CurrencyForm from './components/CurrencyForm';
+import SignupForm from './components/SignupForm';
+import LoginForm from './components/LoginForm';
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
