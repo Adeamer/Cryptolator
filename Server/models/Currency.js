@@ -1,18 +1,35 @@
 const { Schema, model } = require('mongoose');
 
 const currencySchema = new Schema({
-    currency1: {
+    name:{
         type: String,
         required: true,
-        unique: true,
     },
-    currency2: {
+    purchasedAmount: {
         type: String,
         require: true,
-        unique: true,
     },
+    soldAmount: {
+        type: String,
+        require: true,
+    },
+    dateOfTransaction: {
+        type: Date,
+        require: true,
+    },
+    yearlyIncome: {
+        type: String,
+        require: true,
+    },
+    costOwning: {
+        type: String,
+        require: true, 
+    },
+    timeOfOwnership: {
+        type: Boolean,
+        require: true,
+    }
 });
 
-const Currency = model('Currency', currencySchema);
 
 module.exports = Currency;
