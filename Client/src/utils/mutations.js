@@ -12,12 +12,12 @@ mutation loginUser($email: String!, $password: String!) {
 `;
 
 export const ADD_USER = gql`
-mutation addUser($username: String!, $password: String!, $email: String!) {
-    addUser(username: $username, password: $password, email: $email) {
+mutation addUser($name: String!, $password: String!, $email: String!) {
+    addUser(name: $name, password: $password, email: $email) {
         
         user {
             _id
-            username
+            name
             email
             currency
         }
@@ -45,7 +45,7 @@ export const REMOVE_CURRENCY = gql`
 mutation removeCurrency($currencyId: ID!) {
     removeCurrency(currencyID: $currencyId) {
         _id
-        username
+        name
         email
         currency
     }

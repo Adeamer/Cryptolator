@@ -1,9 +1,10 @@
 const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const currencySchema = require('./Currency');
 
 const userSchema = new Schema({
-    username: {
+    name: {
         type: String,
         required: true,
         unique: true,
