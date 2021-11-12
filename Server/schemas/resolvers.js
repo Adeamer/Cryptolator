@@ -1,38 +1,32 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Wallet, Currency, Graph } = require('../models');
+const { User, Currency, Graph } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
     Query: {
         user: async (parent, args, context) => {
             if (context.user) {
-                const userData = await User.findOne({ _id: context.user._id }).select("-_v -password").populate("wallet")
+                const userData = await User.findOne({ _id: context.user._id }).select("-_v -password").populate("currency")
                 return userData;
             }
 
             throw new AuthenticationError("Not Logged in");
         },
-        wallet: async (parent, args, context) => {
-            if (context.user) {
-                return await User.findById(_id).populate('wallet');
-            }
-
-            throw new AuthenticationError("Not Logged in");
-        },
         currency: async (parent, args, context) => {
-            if(context.wallet) {
-                return await Wallet.findById(_id).populate('currency');
+            if(context.user) {
+                return await User.findById(_id).populate('currency');
             }
 
             throw new AuthenticationError("Not Logged in");
         }
     },
 
-    Mutations: {
+    Mutation: {
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
 
+            console.log(token, user);
             return { token, user };
         },
 
