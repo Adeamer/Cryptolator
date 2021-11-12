@@ -35,7 +35,7 @@ const validateMessages = {
 const SignupForm = () => {
 
     // set initial form state
-  const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
+  const [userFormData, setUserFormData] = useState({ name: '', email: '', password: '' });
   
   // set state for form validation
   const [validated] = useState(false);
@@ -67,7 +67,7 @@ const SignupForm = () => {
     }
 
     setUserFormData({
-      username: '',
+      name: '',
       email: '',
       password: '',
     });
@@ -101,15 +101,15 @@ const SignupForm = () => {
       autoComplete="off"
     >
       <Form.Item
-        label="Username"
-        name="username"
+        label="Name"
+        name="name"
         rules={[
           {
             required: true,
-            message: 'Please input your username!',
+            message: 'Please input your name!',
           },
         ]} onChange={handleInputChange}
-        value={userFormData.username}
+        value={userFormData.name}
       >
         <Input />
       </Form.Item>
