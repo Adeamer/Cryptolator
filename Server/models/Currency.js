@@ -32,4 +32,4 @@ const currencySchema = new Schema({
 });
 
 
-module.exports = Currency;
+module.exports = currencySchema;
