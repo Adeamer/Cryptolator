@@ -41,8 +41,8 @@ const typeDefs = gql`
         graphs: [Graph]
     }
 
-    type Mutations {
-        addUser(name: String!, email: String!, password: String!): Auth
+    type Mutation {
+        addUser(name: String!, email: String!, password: String!): User
         addCurrency(currencyType: String!, purchasedAmount: String!, soldAmount: String!, dateOfTransaction: Date!, yearlyIncome: String!, timeOfOwnership: Boolean!): Currency
         removeCurrency(currencyId: ID!): User
         updateUser(name: String!, email: String!, password: String!): Auth
