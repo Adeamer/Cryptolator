@@ -31,12 +31,12 @@ const LoginForm = () => {
                 autoComplete="off"
             >
                 <Form.Item
-                    label="Username"
-                    name="username"
+                    label="Name"
+                    name="name"
                     rules={[
                         {
                             required: true,
-                            message: 'Please input your username!',
+                            message: 'Please input your name!',
                         },
                     ]}
                 >
