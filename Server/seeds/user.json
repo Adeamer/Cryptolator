@@ -3,7 +3,7 @@
         "name": "Anthony Deamer",
         "email": "anthony.deamer@hotmail.com",
         "password": "123456789",
-        "wallet": [
+        "currency": [
             {
                 "name": "Bitcoin",
                 "purchasedAmount": "$1000.00",
@@ -28,7 +28,7 @@
         "name": "Jane Doe",
         "email": "jane.doe@hotmail.com",
         "password": "987654321",
-        "wallet": [
+        "currency": [
             {
                 "name": "Bitcoin",
                 "purchasedAmount": "$5000.00",
