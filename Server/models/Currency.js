@@ -31,5 +31,6 @@ const currencySchema = new Schema({
     }
 });
 
+const Tech = model('Currency', currencySchema);
 
-module.exports = currencySchema;
+module.exports = Currency;
