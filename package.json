@@ -4,7 +4,6 @@
   "description": "",
   "main": "server/server.js",
   "dependencies": {
-    "concurrently": "^5.3.0",
     "date-fns": "^2.25.0",
     "lodash": "^4.17.21",
     "resolve": "^1.20.0",
@@ -28,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/Adeamer/Crypulator/issues"
   },
-  "homepage": "https://github.com/Adeamer/Crypulator#readme"
+  "homepage": "https://github.com/Adeamer/Crypulator#readme",
+  "devDependencies": {
+    "concurrently": "^6.3.0"
+  }
 }
