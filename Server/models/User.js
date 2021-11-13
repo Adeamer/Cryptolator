@@ -19,7 +19,7 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    currency: [currencySchema],
+    currency: [{ name: String, soldAmount: String }],
 },
     {
         toJSON: {
