@@ -2,7 +2,8 @@ import react from 'react';
 import { InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import ApolloClient from 'apollo-boost';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+import "./Styles/App.css";
 
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
@@ -23,17 +24,25 @@ const client = new ApolloClient({
       }
     })
   },
-  uri: '/graphql'
+  uri: '/graphql',
+  cache: new InMemoryCache(),
 });
 
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <Home></Home>
-      </Router>
-    </ApolloProvider>
+    <div className="body">
+      <ApolloProvider className="body" client={client}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path= "login" element={<LoginForm />} />
+            <Route path= "signup" element={<SignupForm />} />
+            <Route path= "dashboard" element={<Dashboard />} />
+          </Routes>
+          </BrowserRouter>
+      </ApolloProvider>
+    </div>
   );
 }
 
