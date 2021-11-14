@@ -3,6 +3,7 @@ import { useMutation } from '@apollo/client';
 import 'antd/dist/antd.css';
 
 import { Form, Input, Button } from 'antd';
+import "../Styles/SignupForm.css";
 
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
@@ -81,9 +82,9 @@ const SignupForm = () => {
   
 
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <Form name="basic" labelCol={{ span: 8, }} wrapperCol={{ span: 16, }} initialValues={{ remember: true, }}
+    <div className="signup-container">
+      <h1 className='signup-title'>Sign Up</h1>
+      <Form className="signup-form" name="basic" labelCol={{ span: 8, }} wrapperCol={{ span: 16, }} initialValues={{ remember: true, }}
       onSubmit={handleFormSubmit} onFinishFailed={onFinishFailed} autoComplete="off"
     >
       <Form.Item label="Name" name="name" rules={[
