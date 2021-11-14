@@ -3,11 +3,12 @@ import { useMutation } from '@apollo/client';
 import 'antd/dist/antd.css';
 
 import { Form, Input, Button, Checkbox } from 'antd';
+import "../Styles/SignupForm.css";
 
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { Redirect } from 'react-router-dom';
-import Dashboard from '../pages/Dashboard';
+import Dashboard from '../pages/dashboard';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -57,9 +58,9 @@ const LoginForm = () => {
     };
 
     return (
-        <div>
-            <h1>Login</h1>
-            <Form name="basic" labelCol={{ span: 8, }} wrapperCol={{ span: 16, }} initialValues={{ remember: true, }}
+        <div className="signup-container">
+            <h1 className='signup-title'>Login</h1>
+            <Form className="signup-form" name="basic" labelCol={{ span: 8, }} wrapperCol={{ span: 16, }} initialValues={{ remember: true, }}
              onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" onSubmit={handleFormSubmit}>
                 <Form.Item label="Email" name="email" rules={[
                         {

@@ -8,7 +8,7 @@ import "../Styles/SignupForm.css";
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Dashboard from '../pages/Dashboard';
+import Dashboard from '../pages/dashboard';
 
 const layout = {
   labelCol: {

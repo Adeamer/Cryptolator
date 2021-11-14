@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SignupForm from '../components/SignupForm';
-import LoginForm from '../components/LoginForm';
+import SignupForm from '../components/signupForm';
+import LoginForm from '../components/loginForm';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { BrowserRouter as Router, Route, Link, Switch, Outlet } from "react-router-dom";
 import '../Styles/Home.css';

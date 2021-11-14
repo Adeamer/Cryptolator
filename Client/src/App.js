@@ -5,12 +5,12 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import "./Styles/App.css";
 
-import Home from './pages/Home';
-import Dashboard from './pages/Dashboard';
-import AddCurrency from './pages/AddCurrency';
-import CurrencyForm from './components/CurrencyForm';
-import SignupForm from './components/SignupForm';
-import LoginForm from './components/LoginForm';
+import Home from './pages/home';
+import Dashboard from './pages/dashboard';
+import AddCurrency from './pages/addCurrency';
+import CurrencyForm from './components/currencyForm';
+import SignupForm from './components/signupForm';
+import LoginForm from './components/loginForm';
 
 
 const client = new ApolloClient({
