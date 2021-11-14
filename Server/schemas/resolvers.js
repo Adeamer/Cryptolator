@@ -26,25 +26,28 @@ const resolvers = {
             const user = await User.create(args);
             const token = signToken(user);
 
-            console.log(token, user);
             return { token, user };
         },
 
         login: async (parent, { email, password }) => {
             const user = await User.findOne({ email });
+            
 
-            if (!user) {
-                throw new AuthenticationError("Incorrect credentials");
+            if (!email) {
+                throw new AuthenticationError("Email is incorrect");
             }
 
             const correctPw = await user.isCorrectPassword(password);
+            
 
             if (!correctPw) {
-                throw new AuthenticationError("Incorrect credentials");
+                throw new AuthenticationError("Password is incorrect");
             }
-
+            
             const token = signToken(user);
+            console.log(user);
             return { token, user };
+            
         },
 
         addCurrency: async (parent, args, context) => {
