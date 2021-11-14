@@ -30,15 +30,9 @@ const typeDefs = gql`
         created: Date
     }
 
-    type Graph {
-        taxAmount: String
-        profit: String
-    }
-
     type Query {
         user: User
         currency: [Currency]
-        graphs: [Graph]
     }
 
     type Mutation {
