@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import SignupForm from '../components/signupForm';
-import LoginForm from '../components/loginForm';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { BrowserRouter as Router, Route, Link, Switch, Outlet } from "react-router-dom";
+import { ApolloClient, InMemoryCache, } from '@apollo/client';
+import { Link, Outlet } from "react-router-dom";
 import '../Styles/Home.css';
 import 'antd/dist/antd.css';
 import { Button } from 'antd';
@@ -33,6 +31,7 @@ const Home = () => {
                 <Link to="/login">
                     <Button type="default" className="login-btn">login</Button>
                 </Link>
+
                 <Outlet />
             </div>
             <img className="logo" src={logo} alt="crypto-calculator"/>
