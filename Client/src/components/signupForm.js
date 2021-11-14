@@ -6,7 +6,6 @@ import { Form, Input, Button } from 'antd';
 
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { Redirect } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Dashboard from '../pages/Dashboard';
 
@@ -74,7 +73,6 @@ const SignupForm = () => {
 
     console.log(userFormData);
 
-    <Redirect to='/dashboard'><Dashboard /></Redirect>
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -85,69 +83,40 @@ const SignupForm = () => {
   return (
     <div>
       <h1>Sign Up</h1>
-      <Form
-      name="basic"
-      labelCol={{
-        span: 8,
-      }}
-      wrapperCol={{
-        span: 16,
-      }}
-      initialValues={{
-        remember: true,
-      }}
-      onSubmit={handleFormSubmit}
-      onFinishFailed={onFinishFailed}
-      autoComplete="off"
+      <Form name="basic" labelCol={{ span: 8, }} wrapperCol={{ span: 16, }} initialValues={{ remember: true, }}
+      onSubmit={handleFormSubmit} onFinishFailed={onFinishFailed} autoComplete="off"
     >
-      <Form.Item
-        label="Name"
-        name="name"
-        rules={[
+      <Form.Item label="Name" name="name" rules={[
           {
             required: true,
             message: 'Please input your name!',
           },
-        ]} onChange={handleInputChange}
-        value={userFormData.name}
+        ]} onChange={handleInputChange} value={userFormData.name}
       >
         <Input />
       </Form.Item>
 
-      <Form.Item
-        label="Email"
-        name="email"
-        rules={[
+      <Form.Item label="Email" name="email" rules={[
           {
             required: true,
             message: 'Please input your email!',
           },
-        ]} onChange={handleInputChange}
-        value={userFormData.email}
+        ]} onChange={handleInputChange} value={userFormData.email}
       >
         <Input />
       </Form.Item>
 
-      <Form.Item
-        label="Password"
-        name="password"
-        rules={[
+      <Form.Item label="Password" name="password" rules={[
           {
             required: true,
             message: 'Please input your password!',
           },
-        ]}onChange={handleInputChange}
-        value={userFormData.password}
+        ]}onChange={handleInputChange} value={userFormData.password}
       >
         <Input.Password />
       </Form.Item>
 
-      <Form.Item
-        wrapperCol={{
-          offset: 8,
-          span: 16,
-        }}
-      >
+      <Form.Item wrapperCol={{ offset: 8, span: 16, }}>
         <Button onSubmit={handleFormSubmit} type="primary" htmlType="submit">Submit</Button>
       </Form.Item>
     </Form>
