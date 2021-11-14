@@ -7,13 +7,13 @@ const Dashboard = () => {
         <div>
             <h1>Hello username</h1>
             <button>Logout</button>
-            <div classname='walletContainer'>
+            <div className='walletContainer'>
                 <h2>Wallet</h2>
                 <p>Currencies</p>
                 <p>Amount</p>
                 <h3>Total</h3>
             </div>
-            <div classname='graphContainer'>
+            <div className='graphContainer'>
                 <Graph />
                 <p>Total amount of tax</p>
             </div>
