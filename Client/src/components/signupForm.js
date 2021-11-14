@@ -6,7 +6,7 @@ import { Form, Input, Button } from 'antd';
 
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
-import { Redirect } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import Dashboard from '../pages/Dashboard';
 
