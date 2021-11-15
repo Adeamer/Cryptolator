@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Graph from '../components/Graph';
+// import Graph from '../components/Graph';
 
 const Dashboard = () => {
 
@@ -14,7 +14,7 @@ const Dashboard = () => {
                 <h3>Total</h3>
             </div>
             <div className='graphContainer'>
-                <Graph />
+               
                 <p>Total amount of tax</p>
             </div>
         </div>
