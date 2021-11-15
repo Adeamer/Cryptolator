@@ -94,9 +94,7 @@ const LoginForm = () => {
                     </Link>
                 </Form.Item>
             </Form>
-            <Routes>
-                <Route path= "dashboard" element={<Dashboard />} />
-            </Routes>
+            <Outlet />
         </div >
     );
 };
