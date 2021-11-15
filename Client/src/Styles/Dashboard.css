@@ -1,3 +1,8 @@
+.dashboard-title {
+    font-family: 'Orbitron', sans-serif;
+    padding: 20px;
+}
+
 .walletContainer {
     display: flex;
     position: absolute;
@@ -38,6 +43,14 @@
     left: 50px;
 }
 
+.currencyName {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+}
+
 .amount-text {
     font-family: 'Orbitron', sans-serif;
     font-size: 20px;
@@ -46,10 +59,28 @@
     left: 50px;
 }
 
-.total-text {
+.sold-amount {
     font-family: 'Orbitron', sans-serif;
     font-size: 20px;
     position: absolute;
-    top: 220px;
-    left: 50px;
+    top: 150px;
+    right: 50px;
+}
+
+.addCurrency-btn {
+    display: flex;
+    position: absolute;
+    right: 170px;
+    top: 350px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+}
+
+.tax-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    display: flex;
+    position: absolute;
+    right: 300px;
+    top: 200px;
 }
