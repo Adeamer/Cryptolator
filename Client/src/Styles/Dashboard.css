@@ -1,0 +1,55 @@
+.walletContainer {
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    top: 150px;
+    left: 150px;
+    width: 500px;
+    height: 500px;
+    border: 5px solid rgb(51, 12, 12);
+    padding: 50px;
+    margin: 20px;
+    box-shadow: 10px 10px;
+    border-radius: 25px;
+}
+
+.logout-btn {
+    display: flex;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+    background-color: rgb(155, 43, 43);
+}
+
+.wallet-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+}
+
+.currency-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 80px;
+    left: 50px;
+}
+
+.amount-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+
+.total-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 220px;
+    left: 50px;
+}
