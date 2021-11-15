@@ -15,8 +15,6 @@ import { useNavigate, Routes, Route } from 'react-router-dom';
 
 
 const LoginForm = () => {
-    const navigate = useNavigate();
-    console.log(useNavigate());
     // const [userFormData, setUserFormData] = useState({ email: '', password: '' });
     // const [validated] = useState(false);
     // const [showAlert, setShowAlert] = useState(false);
@@ -37,7 +35,6 @@ const LoginForm = () => {
         //     });
 
         //     Auth.login(data.login.token)
-            navigate('dashboard', { replace: true });
 
         // } catch (err) {
         //     console.error(err);
