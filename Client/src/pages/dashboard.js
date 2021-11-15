@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import Graph from '../components/Graph';
+import Graph from '../components/Graph';
 
 const Dashboard = () => {
 
