@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import 'antd/dist/antd.css';
 
+import 'antd/dist/antd.css';
 import { Form, Input, Button, Checkbox } from 'antd';
 import "../Styles/SignupForm.css";
 
@@ -89,9 +89,14 @@ const LoginForm = () => {
                 </Form.Item>
 
                 <Form.Item wrapperCol={{ offset: 8, span: 16, }}>
-                    <Button onClick={handleFormSubmit} type="primary" htmlType="submit">Submit</Button>
+                    <Link to="/dashboard">
+                        <Button type="primary" htmlType="submit">Submit</Button>
+                    </Link>
                 </Form.Item>
             </Form>
+            <Routes>
+                <Route path= "dashboard" element={<Dashboard />} />
+            </Routes>
         </div >
     );
 };
