@@ -38,7 +38,7 @@ function App() {
             <Route path="//*" element={<Home />} />
             <Route path= "login" element={<LoginForm />} />
             <Route path= "signup" element={<SignupForm />} />
-            <Route path= "dashboard" element={<Dashboard />} />
+            
           </Routes>
           </BrowserRouter>
       </ApolloProvider>
