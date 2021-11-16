@@ -1,0 +1,180 @@
+.body {
+    background-color: rgb(106, 147, 173);
+}
+
+.title {
+    font-family: 'Monoton', cursive;
+    font-size: 80px;
+    padding: 30px;
+    text-shadow:4px 2px black;
+}
+
+.explination {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    width: 600px;
+    left: 800px;
+    top: 100px;
+}
+
+.btn-container {
+    display: flex;
+    position: absolute;
+    justify-content: space-evenly;
+    top: 250px;
+    left: 950px;
+    width: 400px;
+    height: 400px;
+    border: 5px solid rgb(51, 12, 12);
+    padding: 50px;
+    margin: 20px;
+    box-shadow: 10px 10px;
+    border-radius: 25px;
+}
+
+.signup-btn {
+    width: 80px;
+    position: absolute;
+    top: 30px;
+    left: 175px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+    background-color: rgb(155, 43, 43);
+}
+
+.signup-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 17px;
+    position: absolute;
+    right: 150px;
+    top: 80px;
+}
+
+.login-btn {
+    width: 80px;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgb(42, 99, 91);
+}
+
+.login-text {
+    position: absolute;
+    top: 250px;
+    right: 200px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 17px;
+}
+
+.logo {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 200px;
+    left: 50px;
+    opacity: 0.8;
+    border-radius: 50px;
+    -webkit-transform:rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+.logo2 {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 350px;
+    left: 480px;
+    opacity: 0.8;
+    border-radius: 80px;
+    border: 3px solid black;
+    -webkit-transform:rotate(355deg);
+    -moz-transform: rotate(355deg);
+    -ms-transform: rotate(355deg);
+    -o-transform: rotate(355deg);
+    transform: rotate(355deg);
+}
+
+@media only screen and (max-width: 1024px) {
+    /* For tablets: */
+    .btn-container {
+        display: flex;
+        position: absolute;
+        justify-content: space-evenly;
+        width: 400px;
+        left: 400px;
+        height: 400px;
+        border: 5px solid rgb(51, 12, 12);
+        padding: 50px;
+        margin: 20px;
+        box-shadow: 10px 10px;
+        border-radius: 25px;
+    }
+
+    .explination {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 16px;
+        position: absolute;
+        width: 300px;
+        left: 550px;
+        top: 150px;
+    }
+
+    .logo {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: 200px;
+        left: 50px;
+        opacity: 0.8;
+        border-radius: 50px;
+        -webkit-transform:rotate(5deg);
+        -moz-transform: rotate(5deg);
+        -ms-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    .logo2 {
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        top: 420px;
+        left: 40px;
+        opacity: 0.8;
+        border-radius: 80px;
+        border: 3px solid black;
+        -webkit-transform:rotate(355deg);
+        -moz-transform: rotate(355deg);
+        -ms-transform: rotate(355deg);
+        -o-transform: rotate(355deg);
+        transform: rotate(355deg);
+    }
+
+    .login-btn {
+        width: 180px;
+        position: absolute;
+        top: 250px;
+        left: 1px;
+        font-family: 'Orbitron', sans-serif;
+        border-radius: 5px;
+        font-weight: bold;
+        background-color: rgb(42, 99, 91);
+    }
+
+    .signup-btn {
+        width: 180px;
+        position: absolute;
+        top: 80px;
+        left: 175px;
+        font-family: 'Orbitron', sans-serif;
+        border-radius: 5px;
+        background-color: rgb(155, 43, 43);
+    }
+}
