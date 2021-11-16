@@ -17,13 +17,13 @@ const Dashboard = (props) => {
     const soldAmount = props.soldAmount;
     const purchasedAmount = props.purchasedAmount;
     const yearlyIncome = props.yearlyIncome;
-    const costOwning = props.costOwning;
     const name = props.name;
     const taxAmount = props.taxAmount;
     const setTaxAmount = props.setTaxAmount;
     const tax = props.tax;
     const setTax = props.setTax;
     const setName = props.setName;
+    const ownership = props.ownership;
 
     useEffect(() => {
         
@@ -35,8 +35,14 @@ const Dashboard = (props) => {
             setTax(0.45);
         }
 
-        console.log(tax);
-        // const tax = 0.37;
+
+        if(ownership === true){
+            Math.floor(soldAmount / 0.5);
+            console.log(soldAmount);
+        } else if (ownership === false) {
+            return soldAmount;
+        }
+
         const equation = Math.floor(soldAmount * tax);
         setTaxAmount(equation);
     }, []);
@@ -62,7 +68,7 @@ const Dashboard = (props) => {
                 <p className="currency-text">Currency</p>
                 <p className="currencyName">{currencyName}</p>
                 <p className="amount-text">Amount</p>
-                <p className="sold-amount">{soldAmount}</p>
+                <p className="sold-amount">${soldAmount}</p>
                 <Button onClick={handleSubmit} type="primary" className="addCurrency-btn">Add Currency</Button>
             </div>
             <div className='total-tax'>

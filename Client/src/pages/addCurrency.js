@@ -24,6 +24,8 @@ const AddCurrency = (props) => {
 
     const costOwning = props.costOwning;
     const setCostOwning = props.setCostOwning;
+    const ownership = props.ownership;
+    const setOwnership = props.setOwnership;
 
 
 
@@ -42,7 +44,7 @@ const AddCurrency = (props) => {
             setYearlyIncome(inputValue);
         } else if (inputType === 'costOwning') {
             setCostOwning(inputValue);
-        }
+        } 
     }
 
     const handleFormSubmit = async (event) => {
@@ -103,22 +105,13 @@ const AddCurrency = (props) => {
                 ]} onChange={handleInputChange} value={yearlyIncome}>
                     <Input name="yearlyIncome" />
                 </Form.Item>
-
-                <Form.Item label="Cost of Owning" rules={[
-                    {
-                        required: true,
-                        message: 'Please enter how much it cost to own this',
-                    },
-                ]} onChange={handleInputChange} value={costOwning}>
-                    <Input name="costOwning" />
-                </Form.Item>
-
+{/* 
                 <Form.Item name="Ownership" valuePropName="checked" wrapperCol={{
                     offset: 8,
                     span: 16,
-                }}>
-                    <Checkbox>Owned longer then 12 months?</Checkbox>
-                </Form.Item>
+                }}onChange={handleInputChange} value={ownership}>
+                    <Checkbox name="checkbox">Owned longer then 12 months?</Checkbox>
+                </Form.Item> */}
                 <Form.Item wrapperCol={{ offset: 8, span: 16, }}>
                     <Link to="/dashboard">
                         <Button onClick={handleFormSubmit} type="primary" htmlType="submit">Submit</Button>

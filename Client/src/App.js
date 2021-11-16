@@ -35,7 +35,7 @@ function App() {
   const [purchasedAmount, setPurchasedAmount] = useState('');
   const [soldAmount, setSoldAmount] = useState('');
   const [yearlyIncome, setYearlyIncome] = useState('');
-  const [costOwning, setCostOwning] = useState('');
+  // const [ownership, setOwnership] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -52,10 +52,16 @@ function App() {
             <Route path="login/*" element={<LoginForm email={email} setEmail={setEmail} password={password} setPassword={setPassword}/>} />
             <Route path="signup" element={<SignupForm email={email} setEmail={setEmail} password={password} setPassword={setPassword} name={name} setName={setName}/>} />
             <Route path="/dashboard" element={<Dashboard currencyName={currencyName} soldAmount={soldAmount} yearlyIncome={yearlyIncome} purchasedAmount={purchasedAmount} 
-            costOwning={costOwning} name={name} taxAmount={taxAmount} setTaxAmount={setTaxAmount} tax={tax} setTax={setTax} />} />
+            name={name} taxAmount={taxAmount} setTaxAmount={setTaxAmount} tax={tax} setTax={setTax} 
+            // ownership={ownership} 
+            />} 
+            />
             <Route path="/addCurrency" element={<AddCurrency currencyName={currencyName} setCurrencyName={setCurrencyName} purchasedAmount={purchasedAmount} 
-            setPurchasedAmount={setPurchasedAmount} soldAmount={soldAmount} yearlyIncome={yearlyIncome} costOwning={costOwning}
-            setSoldAmount={setSoldAmount} setYearlyIncome={setYearlyIncome} setCostOwning={setCostOwning} />} />
+            setPurchasedAmount={setPurchasedAmount} soldAmount={soldAmount} yearlyIncome={yearlyIncome}
+            setSoldAmount={setSoldAmount} setYearlyIncome={setYearlyIncome} 
+            // ownership={ownership} setOwnership={setOwnership} 
+            />} 
+            />
           </Routes>
         </BrowserRouter>
       </ApolloProvider>
