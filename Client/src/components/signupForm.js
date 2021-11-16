@@ -28,95 +28,112 @@ const validateMessages = {
 
 
 
-const SignupForm = () => {
+const SignupForm = (props) => {
 
-    // set initial form state
-  const [userFormData, setUserFormData] = useState({ name: '', email: '', password: '' });
+  // set initial form state
   
+
   // set state for form validation
-  const [validated] = useState(false);
-  // set state for alert
-  const [showAlert, setShowAlert] = useState(false);
+  // const [validated] = useState(false);
+
 
   const [addUser] = useMutation(ADD_USER);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setUserFormData({ ...userFormData, [name]: value });
+  const email = props.email;
+  const setEmail = props.setEmail;
+  const password = props.password;
+  const setPassword = props.setPassword;
+  const name = props.name;
+  const setName = props.setName;
+
+  const handleInputChange = (e) => {
+      const { target } = e;
+      const inputType = target.name;
+      const inputValue = target.value;
+      console.log(e);
+      if (inputType === 'email') {
+          setEmail(inputValue);
+      } else if (inputType === 'password') {
+          setPassword(inputValue);
+      } else if (inputType === 'name') {
+        setName(inputValue);
+      }
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     // use try/catch instead of promises to handle errors
-    try {
-      // execute addUser mutation and pass in variable data from form
-      const { data } = await addUser({
-        variables: { ...userFormData }
-      });
+    // try {
+    //   // execute addUser mutation and pass in variable data from form
+    //   const { data } = await addUser({
+    //     variables: { ...userFormData }
+    //   });
 
-      Auth.login(data.addUser.token)
+    //   Auth.login(data.addUser.token)
 
-    } catch (e) {
-      console.error(e);
-      setShowAlert(true);
-    }
+    // } catch (e) {
+    //   console.error(e);
 
-    setUserFormData({
-      name: '',
-      email: '',
-      password: '',
-    });
+    // }
 
-    console.log(userFormData);
+    // setUserFormData({
+    //   name: '',
+    //   email: '',
+    //   password: '',
+    // });
+
+    
 
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
-  
+
 
   return (
     <div className="signup-container">
       <h1 className='signup-title'>Sign Up</h1>
       <Form className="signup-form" name="basic" labelCol={{ span: 8, }} wrapperCol={{ span: 16, }} initialValues={{ remember: true, }}
-      onSubmit={handleFormSubmit} onFinishFailed={onFinishFailed} autoComplete="off"
-    >
-      <Form.Item label="Name" name="name" rules={[
+        onSubmit={handleFormSubmit} onFinishFailed={onFinishFailed} autoComplete="off"
+      >
+        <Form.Item label="Name" rules={[
           {
             required: true,
             message: 'Please input your name!',
           },
-        ]} onChange={handleInputChange} value={userFormData.name}
-      >
-        <Input />
-      </Form.Item>
+        ]} onChange={handleInputChange} value={name}
+        >
+          <Input name="name" />
+        </Form.Item>
 
-      <Form.Item label="Email" name="email" rules={[
+        <Form.Item label="Email" rules={[
           {
             required: true,
             message: 'Please input your email!',
           },
-        ]} onChange={handleInputChange} value={userFormData.email}
-      >
-        <Input />
-      </Form.Item>
+        ]} onChange={handleInputChange} value={email}
+        >
+          <Input name="email" />
+        </Form.Item>
 
-      <Form.Item label="Password" name="password" rules={[
+        <Form.Item label="Password" rules={[
           {
             required: true,
             message: 'Please input your password!',
           },
-        ]}onChange={handleInputChange} value={userFormData.password}
-      >
-        <Input.Password />
-      </Form.Item>
+        ]} onChange={handleInputChange} value={password}
+        >
+          <Input.Password name="password" />
+        </Form.Item>
 
-      <Form.Item wrapperCol={{ offset: 8, span: 16, }}>
-        <Button onSubmit={handleFormSubmit} type="primary" htmlType="submit">Submit</Button>
-      </Form.Item>
-    </Form>
+        <Form.Item wrapperCol={{ offset: 8, span: 16, }}>
+          <Link to="/dashboard">  
+            <Button type="primary" htmlType="submit">Submit</Button>
+          </Link>
+        </Form.Item>
+      </Form>
     </div>
   );
 };
