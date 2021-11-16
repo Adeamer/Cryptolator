@@ -15,10 +15,10 @@ import { useNavigate, Routes, Route } from 'react-router-dom';
 
 
 const LoginForm = (props) => {
-    // const [validated] = useState(false);
-    // const [showAlert, setShowAlert] = useState(false);
+    const [validated] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
 
-    // const [loginUser, { error }] = useMutation(LOGIN_USER);
+    const [loginUser, { error }] = useMutation(LOGIN_USER);
     const email = props.email;
     const setEmail = props.setEmail;
     const password = props.password;
@@ -43,22 +43,19 @@ const LoginForm = (props) => {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
 
-        // try {
-        //     const { data } = await loginUser({
-        //         variables: { ...userFormData }
-        //     });
+        try {
+            const { data } = await loginUser({
+                variables: { ...email, ...password }
+            });
 
-        //     Auth.login(data.login.token)
+            Auth.login(data.login.token)
 
-        // } catch (err) {
-        //     console.error(err);
-        // }
+        } catch (err) {
+            console.error(err);
+        }
 
-        // setUserFormData({
-        //     username: '',
-        //     email: '',
-        //     password: '',
-        // });
+        setEmail('');
+        setPassword('');
     };
 
     const onFinish = (values) => {
