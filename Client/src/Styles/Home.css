@@ -101,7 +101,7 @@
     transform: rotate(355deg);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
     /* For tablets: */
     .btn-container {
         display: flex;
