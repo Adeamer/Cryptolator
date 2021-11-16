@@ -6,6 +6,7 @@ import { Button } from 'antd';
 import { Link, useNavigate, Route, Routes } from 'react-router-dom';
 import { useMutation, gql } from "@apollo/client";
 import AddCurrency from './addCurrency';
+import { selectionSetMatchesResult } from '@apollo/client/cache/inmemory/helpers';
 
 
 
@@ -14,12 +15,39 @@ const Dashboard = (props) => {
 
     const currencyName = props.currencyName;
     const soldAmount = props.soldAmount;
-    console.log(currencyName);
-    console.log(soldAmount);
+    const purchasedAmount = props.purchasedAmount;
+    const yearlyIncome = props.yearlyIncome;
+    const costOwning = props.costOwning;
+    const name = props.name;
+    const taxAmount = props.taxAmount;
+    const setTaxAmount = props.setTaxAmount;
+    const tax = props.tax;
+    const setTax = props.setTax;
+    const setName = props.setName;
+
+    useEffect(() => {
+        
+        if(yearlyIncome <= 120000) {
+            setTax(0.325);
+        } else if (yearlyIncome > 120000 && yearlyIncome <= 180000) {
+            setTax(0.37);
+        } else if (yearlyIncome > 180000) {
+            setTax(0.45);
+        }
+
+        console.log(tax);
+        // const tax = 0.37;
+        const equation = Math.floor(soldAmount * tax);
+        setTaxAmount(equation);
+    }, []);
+
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         navigate('/addCurrency', { replace: true });
+
+        
+
     };
 
     return (
@@ -40,7 +68,7 @@ const Dashboard = (props) => {
             <div className='total-tax'>
                
                 <p className="tax-title">Total amount of tax</p>
-                
+                <p className="tax-amount">${taxAmount}.00</p>
             </div>
         </div>
     )
