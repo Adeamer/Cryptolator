@@ -66,7 +66,6 @@ const Dashboard = (props) => {
                 <Button onClick={handleSubmit} type="primary" className="addCurrency-btn">Add Currency</Button>
             </div>
             <div className='total-tax'>
-               
                 <p className="tax-title">Total amount of tax</p>
                 <p className="tax-amount">${taxAmount}.00</p>
             </div>
