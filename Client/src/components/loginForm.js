@@ -14,17 +14,31 @@ import { useNavigate, Routes, Route } from 'react-router-dom';
 
 
 
-const LoginForm = () => {
-    // const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+const LoginForm = (props) => {
     // const [validated] = useState(false);
     // const [showAlert, setShowAlert] = useState(false);
 
     // const [loginUser, { error }] = useMutation(LOGIN_USER);
+    const email = props.email;
+    const setEmail = props.setEmail;
+    const password = props.password;
+    const setPassword = props.setPassword;
+    const name = props.name;
+    const setName = props.setName;
 
-    // const handleInputChange = (event) => {
-    //     const { name, value } = event.target;
-    //     setUserFormData({ ...userFormData, [name]: value });
-    // };
+    const handleInputChange = (e) => {
+        const { target } = e;
+        const inputType = target.name;
+        const inputValue = target.value;
+        console.log(e);
+        if (inputType === 'email') {
+            setEmail(inputValue);
+        } else if (inputType === 'password') {
+            setPassword(inputValue);
+        } else {
+            setName("Anthony Deamer");
+        }
+    };
 
     const handleFormSubmit = async (event) => {
         event.preventDefault();
@@ -59,23 +73,23 @@ const LoginForm = () => {
         <div className="signup-container">
             <h1 className='signup-title'>Login</h1>
             <Form className="signup-form" name="basic" labelCol={{ span: 8, }} wrapperCol={{ span: 16, }} initialValues={{ remember: true, }}
-             onFinish={onFinish} onFinishFailed={onFinishFailed} autoComplete="off" >
+             onFinish={onFinish} onFinishFailed={onFinishFailed} onSubmit={handleFormSubmit} autoComplete="off" >
                 <Form.Item label="Email" name="email" rules={[
                         {
                             required: true,
                             message: 'Please input your email!',
                         },
-                    ]} onSubmit={handleFormSubmit}>
-                    <Input />
+                    ]} onChange={handleInputChange} >
+                    <Input name="email" value={email} />
                 </Form.Item>
 
-                <Form.Item label="Password" name="password" rules={[
+                <Form.Item label="Password"  rules={[
                         {
                             required: true,
                             message: 'Please input your password!',
                         },
-                    ]}>
-                    <Input.Password />
+                    ]} onChange={handleInputChange} >
+                    <Input.Password name="password" value={password} />
                 </Form.Item>
 
                 <Form.Item name="remember" valuePropName="checked" wrapperCol={{
