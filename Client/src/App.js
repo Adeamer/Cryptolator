@@ -36,19 +36,25 @@ function App() {
   const [soldAmount, setSoldAmount] = useState('');
   const [yearlyIncome, setYearlyIncome] = useState('');
   const [costOwning, setCostOwning] = useState('');
-  console.log(currencyName);
-
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
+  const [taxAmount, setTaxAmount] = useState('');
+  const [tax, setTax] = useState('');
+  
+  
   return (
     <div className="body">
       <ApolloProvider className="body" client={client}>
         <BrowserRouter>
           <Routes>
             <Route path="//*" element={<Home />} />
-            <Route path="login/*" element={<LoginForm />} />
-            <Route path="signup" element={<SignupForm />} />
-            <Route path="/dashboard" element={<Dashboard currencyName={currencyName} soldAmount={soldAmount} />} />
-            <Route path="/addCurrency" element={<AddCurrency currencyName={currencyName} setCurrencyName={setCurrencyName} purchasedAmount={purchasedAmount} setPurchasedAmount={setPurchasedAmount}
-            soldAmount={soldAmount} yearlyIncome={yearlyIncome} costOwning={costOwning}
+            <Route path="login/*" element={<LoginForm email={email} setEmail={setEmail} password={password} setPassword={setPassword}/>} />
+            <Route path="signup" element={<SignupForm email={email} setEmail={setEmail} password={password} setPassword={setPassword} name={name} setName={setName}/>} />
+            <Route path="/dashboard" element={<Dashboard currencyName={currencyName} soldAmount={soldAmount} yearlyIncome={yearlyIncome} purchasedAmount={purchasedAmount} 
+            costOwning={costOwning} name={name} taxAmount={taxAmount} setTaxAmount={setTaxAmount} tax={tax} setTax={setTax} />} />
+            <Route path="/addCurrency" element={<AddCurrency currencyName={currencyName} setCurrencyName={setCurrencyName} purchasedAmount={purchasedAmount} 
+            setPurchasedAmount={setPurchasedAmount} soldAmount={soldAmount} yearlyIncome={yearlyIncome} costOwning={costOwning}
             setSoldAmount={setSoldAmount} setYearlyIncome={setYearlyIncome} setCostOwning={setCostOwning} />} />
           </Routes>
         </BrowserRouter>
