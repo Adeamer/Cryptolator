@@ -12,12 +12,16 @@ const AddCurrency = (props) => {
 
     const currencyName = props.currencyName;
     const setCurrencyName = props.setCurrencyName;
+
     const purchasedAmount = props.purchasedAmount;
     const setPurchasedAmount = props.setPurchasedAmount
+
     const soldAmount = props.soldAmount;
     const setSoldAmount = props.setSoldAmount;
+
     const yearlyIncome = props.yearlyIncome;
     const setYearlyIncome = props.setYearlyIncome;
+
     const costOwning = props.costOwning;
     const setCostOwning = props.setCostOwning;
 
@@ -27,22 +31,17 @@ const AddCurrency = (props) => {
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
-        console.log(e);
+  
         if (inputType === 'currency') {
             setCurrencyName(inputValue);
-            console.log("currency", inputValue);
         } else if (inputType === 'purchasedAmount') {
             setPurchasedAmount(inputValue);
-            console.log("purchasedAmount", inputValue);
         } else if (inputType === 'soldAmount') {
             setSoldAmount(inputValue);
-            console.log("soldAmount", inputValue);
         } else if (inputType === 'yearlyIncome') {
             setYearlyIncome(inputValue);
-            console.log("yearlyIncome", inputValue);
         } else if (inputType === 'costOwning') {
             setCostOwning(inputValue);
-            console.log("costOwning", inputValue);
         }
     }
 
