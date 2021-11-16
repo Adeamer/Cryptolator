@@ -59,6 +59,13 @@
     top: 150px;
     left: 50px;
 }
+.soldAmount-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
 
 .sold-amount {
     font-family: 'Orbitron', sans-serif;
