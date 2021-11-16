@@ -26,3 +26,77 @@
     font-family: 'Orbitron', sans-serif;
 }
 
+@media only screen and (max-width: 1200px) {
+    .signup-container {
+        display: flex;
+        border: 5px solid rgb(51, 12, 12);
+        width: 600px;
+        position: absolute;
+        left: 200px;
+        height: 400px;
+        top: 150px;
+        background-color: rgb(11, 75, 105);
+        box-shadow: 10px 10px;
+        border-radius: 25px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .signup-container {
+        display: flex;
+        border: 5px solid rgb(51, 12, 12);
+        width: 600px;
+        position: absolute;
+        left: 80px;
+        height: 400px;
+        top: 150px;
+        background-color: rgb(11, 75, 105);
+        box-shadow: 10px 10px;
+        border-radius: 25px;
+    }
+    .signup-title {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: bold;
+        position: absolute;
+        left: 230px;
+        top: 30px;
+        color: white;
+    }
+    .signup-form {
+        position: relative;
+        top: 120px;
+        width: 500px;
+        right: 50px;
+        font-family: 'Orbitron', sans-serif;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .signup-container {
+        display: flex;
+        border: 5px solid rgb(51, 12, 12);
+        width: 600px;
+        position: absolute;
+        left: 20px;
+        height: 400px;
+        top: 150px;
+        background-color: rgb(11, 75, 105);
+        box-shadow: 10px 10px;
+        border-radius: 25px;
+    }
+    .signup-title {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: bold;
+        position: absolute;
+        left: 230px;
+        top: 20px;
+        color: white;
+    }
+    .signup-form {
+        position: relative;
+        top: 50px;
+        width: 500px;
+        right: 5px;
+        font-family: 'Orbitron', sans-serif;
+    }
+}
