@@ -1,4 +1,4 @@
-# Cryptolator
+# Crypulator
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -17,7 +17,7 @@ MIT [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https
 ## Contributing
 Anthony Deamer
 
-If you wish to contibute please see my github Repo https://github.com/Adeamer/Cryptolator
+If you wish to contibute please see my github Repo https://github.com/Adeamer/Crypulator
 
 ## Demo
 
@@ -27,6 +27,6 @@ If you wish to contibute please see my github Repo https://github.com/Adeamer/Cr
 
 ## Links
 
-Git-Gub: https://github.com/Adeamer/Cryptolator
+Git-Gub: https://github.com/Adeamer/Crypulator
 
 Heroku: https://crypulator.herokuapp.com/

@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <div className="body">
             <header>
-                <h1 className="title">Cryptolator</h1>
+                <h1 className="title">Crypulator</h1>
                 <p className="explination">Tired of being stung at tax time? Plan ahead with Crypulator and get the most out of you crypto investments!</p>
             </header>
             <div className="btn-container">
