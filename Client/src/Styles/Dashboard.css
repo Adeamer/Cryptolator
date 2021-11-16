@@ -84,3 +84,12 @@
     right: 300px;
     top: 200px;
 }
+
+.tax-amount {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    display: flex;
+    position: absolute;
+    right: 400px;
+    top: 300px;
+}
